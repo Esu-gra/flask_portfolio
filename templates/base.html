@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "Il Mio Portfolio" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- cdn icon  -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- cdn FontAwesome -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome (icone social e contatti) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!--  NAVBAR MODERNA -->
+    <!-- <header class="navbar">
+        <div class="container">
+            <h3 class="logo">
+              <a href="{{ url_for('home') }}">
+                 <i class="fa-solid fa-laptop-code"></i> EG Dev
+              </a>
+            </h3>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">Chi Sono</a></li>
+                    <li><a href="{{ url_for('show_projects') }}">Progetti</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contatti</a></li>
+                    <li><a href="{{ url_for('skills') }}">Competenze</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>🔹 NAVBAR MODERNA -->
+<header class="navbar">
+  <div class="container">
+    <!-- 🔹 LOGO -->
+    <h1 class="logo">
+      <a href="{{ url_for('home') }}">
+        <i class="fa-solid fa-laptop-code"></i> EG Dev
+      </a>
+    </h1>
+
+
+    <!-- 🔹 Bottone menu hamburger -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    
+   
+
+    <!-- 🔹 Link di navigazione -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('show_projects') }}">Progetti</a></li>
+      <li><a href="{{ url_for('skills') }}">Competenze</a></li>
+      <li><a href="{{ url_for('contact') }}">Contatti</a></li>
+      <li><a href="{{ url_for('about') }}">Altro</a></li>
+    </ul>
+  </div>
+</header>
+
+    <!-- 🔹 CONTENUTO PRINCIPALE -->
+    <main class="main-content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- 🔹 FOOTER FISSO -->
+    <footer class="footer">
+    <div class="footer-container">
+        <p>© 2025 - Creato con Flask</p>
+
+        <!-- 🔹 Contatti Social -->
+        <div class="footer-contacts">
+            <a href="tel:+393925556443" title="Chiama">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:esubalewgrappasonni@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/esubalew-grappasonni-web-developer" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Esu-gra" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+         <!-- 🔹 Bottone Dark/Light Mode -->
+       
+       <button id="theme-toggle" class="theme-toggle" aria-label="Cambia tema">
+          <i class="fa-solid fa-moon"></i>
+       </button>
+    </div>
+</footer>
+
+
+<script>
+  const btn = document.getElementById("hamburger-btn");
+  const nav = document.getElementById("nav-links");
+  const logo = document.querySelector(".logo"); // 👈 seleziona il logo
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("show");
+    btn.querySelector("i").classList.toggle("fa-bars");
+    btn.querySelector("i").classList.toggle("fa-xmark");
+
+    // 👇 nasconde o mostra il logo quando il menu è attivo
+    logo.classList.toggle("hidden-logo");
+  });
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Controlla se l'utente aveva già scelto un tema
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    const isDark = body.classList.contains("dark-mode");
+    themeToggle.innerHTML = isDark
+      ? '<i class="fa-solid fa-sun"></i>'
+      : '<i class="fa-solid fa-moon"></i>';
+
+    // Salva la preferenza nel browser
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
+
+
+</body>
+</html>

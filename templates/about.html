@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Chi sono</h2>
+<p>Studente presso Its-ict-academy Roma con una forte inclinazione per lo sviluppo back-end e solide
+competenze acquisite attraverso un coding bootcamp di Aulab, specializzato nella programmazione
+ad oggetti. Propenso al lavoro di gruppo e con grande capacità di adeguamento in diversi settori
+lavorativi, competenze sviluppate attraverso formazioni anche da autodidatta</p>
+
+<section class="cv-download">
+    <h3>Vuoi saperne di più su di me?</h3>
+    <p>Scarica il mio curriculum aggiornato:</p>
+  <a href="{{ url_for('static', filename='files/CV_Esubalew_Grappasonni_data_2025.pdf') }}"
+   class="btn-secondary" download>
+   <i class="fa-solid fa-file-arrow-down"></i> Scarica CV (PDF)
+</a>
+
+</section>
+{% endblock %}

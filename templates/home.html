@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- 🔹 HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Ciao, sono <span class="accent">Edoardo</span> </h1>
+        <p>Sono uno sviluppatore junior con passione per Python, Flask e lo sviluppo web.Mi piace creare applicazioni semplici ma funzionali, e imparare ogni giorno qualcosa di nuovo</p>
+        <a href="{{ url_for('show_projects') }}" class="btn-primary">Repository Lezioni Its</a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='img/fotoMe.jpg') }}" alt="Foto profilo">
+    </div>
+</section>
+
+<!-- 🔹 SEZIONE PROGETTI -->
+<!-- <section class="projects-preview">
+    <h2> Progetti recenti</h2>
+    <div class="projects-grid">
+        {% for p in projects %}
+        <div class="project-card">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.description }}</p>
+            <a href="{{ p.link }}" class="btn-secondary">Vedi progetto</a>
+        </div>
+        {% endfor %}
+    </div>
+</section> -->
+
+{% endblock %}

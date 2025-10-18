@@ -1,0 +1,1015 @@
+/* === DARK MODE TOGGLE BUTTON === */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 1em;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+  color: #00b4d8;
+}
+
+/* === DARK MODE THEME === */
+body.dark-mode {
+  background-color: #181818;
+  color: #f5f5f5;
+}
+
+body.dark-mode .navbar {
+  background: linear-gradient(135deg, #111, #222);
+}
+
+body.dark-mode .project-card,
+body.dark-mode .skill-card,
+body.dark-mode .contact-form {
+  background: #222;
+  color: #f5f5f5;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-secondary {
+  background: #333;
+  border: 1px solid #555;
+  color: #f5f5f5;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #444;
+}
+
+body.dark-mode .footer {
+  background-color: #111;
+}
+
+body.dark-mode .footer-contacts a:hover {
+  color: #00b4d8;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff;
+}
+
+/* RESET BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STRUTTURA GENERALE */
+/* STRUTTURA GENERALE */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    letter-spacing: 0.2px;
+}
+
+
+/* CONTAINER CENTRALE */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 🔹 NAVBAR */
+.navbar {
+    background: linear-gradient(135deg, #2b2b2b, #444);
+    color: white;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* === NASCONDI LOGO QUANDO MENU MOBILE È APERTO === */
+.hidden-logo {
+  display: none;
+}
+
+
+/* (opzionale) su desktop il logo non deve mai sparire */
+@media (min-width: 801px) {
+  .hidden-logo {
+    display: flex !important;
+  }
+}
+
+
+
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+/* .nav-links a:hover {
+    color: #00c2cb;
+} */
+
+/* Disposizione header */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* 🔹 MAIN CONTENT */
+.main-content {
+    flex: 1; /* spinge il footer in basso */
+    padding: 2em 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #0078d7;
+}
+
+/* a:hover {
+    color: #005ea2;
+} */
+
+/* 🔹 ELEMENTI EXTRA */
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    color: #222;
+    text-align: center;
+
+}
+/* 🔹 Font personalizzati */
+h1, h2, h3, h4, h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #111;
+}
+
+code, pre, .project-tech span {
+    font-family: "Roboto Mono", monospace;
+}
+
+
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 700px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8em;
+    }
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* === BASE RESTA UGUALE COME PRIMA === */
+
+/* 🔹 HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    background: linear-gradient(135deg, #e9f5ff, #ffffff);
+    padding: 3em 2em;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+.hero-text .accent {
+    color:  #222;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 BOTTONI */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.7em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: 0 auto; /* 🔹 centra orizzontalmente */
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-color:black;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔹 centra tutto in orizzontale */
+    justify-content: space-between;
+    text-align: center;
+}
+
+.project-content h3,
+.project-content p {
+    text-align: center;
+}
+
+/* === SEZIONE LEARNING / REPO ITS === */
+.learning-section {
+  margin-top: 4em;
+}
+
+.learning-section h2 {
+  text-align: center;
+  color: #0078d7;
+}
+
+.learning-card {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Icona GitHub grande */
+.project-icon {
+  font-size: 4em;
+  color: #333;
+  margin-bottom: 0.4em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* .learning-card:hover .project-icon {
+  color: #0078d7;
+  transform: scale(1.1);
+} */
+
+/* 🔹 Bottone centrato */
+.learning-card .btn-secondary {
+  margin-top: 1em;
+}
+
+
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 180px;
+    }
+}
+
+
+
+/* === HOME: PROGETTI RECENTI === */
+.projects-preview {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.projects-preview .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    justify-items: center; /* 🔹 centra orizzontalmente le card */
+}
+
+.projects-preview .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 🔹 centra testo e bottone */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔹 centra tutto internamente */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects-preview .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 bottone centrato */
+.projects-preview .project-card .btn-secondary {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 🔹 FORM DI CONTATTO */
+.contact-form {
+    max-width: 600px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background: white;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* === CONTACT FORM BUTTON (versione migliorata) === */
+.contact-form button {
+  background: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9em 1.8em;
+  cursor: pointer;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 120, 215, 0.3);
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  /* background: linear-gradient(135deg, #0097e6, #00c2cb); */
+  box-shadow: 0 6px 14px rgba(0, 180, 216, 0.4);
+}
+
+.contact-form button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 120, 215, 0.2);
+}
+
+
+.p_contact{
+    text-align: center;
+}
+
+/* 🔹 FLASH MESSAGES */
+.flash {
+    text-align: center;
+    padding: 0.8em;
+    border-radius: 8px;
+    margin: 1em auto;
+    width: 80%;
+    font-weight: bold;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* === SKILLS SECTION === */
+.skills-intro {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #555;
+}
+
+.skill-category {
+    margin-bottom: 3em;
+}
+
+.skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* 🔹 CARD */
+/* === SKILL CARD (versione aggiornata) === */
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card .icon {
+  font-size: 3em;
+  margin-bottom: 0.6em;
+  transition: color 0.3s ease;
+}
+
+.skill-card h4 {
+  margin-bottom: 0.6em;
+  color: #222;
+}
+
+.percent {
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 0.4em;
+  display: inline-block;
+}
+
+/* === BARRE DI PROGRESSO === */
+.bar-bg {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 10px;
+  background: linear-gradient(90deg, #0078d7, #00b4d8);
+  border-radius: 5px;
+  transition: width 1.2s ease-out;
+}
+
+/* === SOFT SKILLS === */
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.soft-skills li {
+  background: linear-gradient(90deg, #0078d7, #00b4d8);
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 25px;
+  font-size: 0.9em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-skills li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 180, 216, 0.4);
+}
+
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 700px) {
+    .skills-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* === PROJECTS SECTION === */
+.projects-section {
+  text-align: center;
+  margin-top: 2em;
+  padding: 2em 0;
+}
+
+.projects-title {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+  color: #222;
+}
+
+.projects-intro {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2em;
+}
+
+/* 🔹 Griglia delle card */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  justify-items: center;
+}
+
+/* 🔹 Card singola */
+.project-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.8em 1.2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Icona GitHub */
+.project-icon {
+  font-size: 3em;
+  color: #0d7fdc;
+  margin-bottom: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  color: #005ea2;
+}
+
+/* 🔹 Testo */
+.project-card h3 {
+  margin-bottom: 0.5em;
+  color: #222;
+  font-size: 1.2em;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 1em;
+}
+
+/* 🔹 Bottone */
+.project-card .btn-secondary {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.project-card .btn-secondary:hover {
+  background: #e2e2e2;
+  border-color: #bbb;
+}
+
+/* === FILTRO PROGETTI === */
+.filter-container {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.filter-select {
+    padding: 0.6em 1em;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-select:hover {
+    border-color: #0078d7;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.3);
+}
+
+
+
+
+/* contact */
+/* === SEZIONE DOWNLOAD CV === */
+/* === SEZIONE DOWNLOAD CV === */
+.cv-download {
+  text-align: center;
+  margin-top: 3em;
+  background: #f8f9fa;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cv-download h3 {
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+.cv-download p {
+  color: #555;
+  margin-bottom: 1em;
+}
+
+.cv-download .btn-secondary {
+  font-size: 1em;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+}
+
+/* === VERSIONE DARK MODE === */
+body.dark-mode .cv-download {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .cv-download h3 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .cv-download p {
+  color: #cbd5e1 !important;
+}
+
+/* Bottone coerente col resto della dark mode */
+body.dark-mode .cv-download .btn-secondary {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  border: 1px solid #475569 !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .cv-download .btn-secondary:hover {
+  background: #475569 !important;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25) !important;
+}
+
+.cv-download .btn-secondary i {
+  margin-right: 0.5em;
+}
+
+
+/* 🔹 FOOTER FISSO
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} */
+
+
+/* === FOOTER AGGIORNATO === */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.footer-contacts {
+    display: flex;
+    gap: 1.2em;
+    justify-content: center;
+}
+
+.footer-contacts a {
+    color: white;
+    font-size: 1.3em;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-contacts a:hover {
+    color: #00b4d8;
+    transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .footer-contacts a {
+        font-size: 1.1em;
+    }
+}
+
+
+
+/* === MENU HAMBURGER === */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: block; /* mostra il bottone */
+  }
+
+  .nav-links {
+    display: none; /* nasconde i link inizialmente */
+    flex-direction: column;
+    background: linear-gradient(135deg, #2b2b2b, #444);
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
+    top: 60px; /* sotto la navbar */
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex; /* mostra i link quando è attivo */
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li {
+    margin: 0.8em 0;
+  }
+
+  .navbar .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* === DARK MODE === */
+/* === DARK MODE - VERSIONE MIGLIORATA === */
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+/* Navbar & Footer */
+body.dark-mode .navbar {
+  background: linear-gradient(135deg, #0b1120, #1e293b) !important;
+}
+
+body.dark-mode .footer {
+  background-color: #0b1120 !important;
+  color: #94a3b8 !important;
+}
+
+/* Card, form e sezioni */
+body.dark-mode .project-card,
+body.dark-mode .skill-card,
+body.dark-mode .contact-form,
+body.dark-mode .learning-card {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Titoli */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f1f5f9 !important;
+}
+
+/* Paragrafi */
+body.dark-mode p {
+  color: #cbd5e1 !important;
+}
+
+/* Link e accenti */
+body.dark-mode a {
+  color: #38bdf8 !important;
+}
+body.dark-mode a:hover {
+  color: #7dd3fc !important;
+}
+
+/* Bottoni */
+body.dark-mode .btn-secondary {
+  background: #334155 !important;
+  border: 1px solid #475569 !important;
+  color: #e2e8f0 !important;
+}
+body.dark-mode .btn-secondary:hover {
+  background: #475569 !important;
+}
+
+/* Input e Textarea */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #1e293b !important;
+  border: 1px solid #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Flash message */
+body.dark-mode .flash.success {
+  background-color: #14532d !important;
+  border-color: #22c55e !important;
+}
+body.dark-mode .flash.error {
+  background-color: #7f1d1d !important;
+  border-color: #ef4444 !important;
+}
+
+/* Progress bar (skill) */
+body.dark-mode .bar-bg {
+  background: #334155 !important;
+}
+body.dark-mode .bar-fill {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9) !important;
+}
+
+/* === HERO SECTION IN DARK MODE === */
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #0b1120, #1e293b) !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .hero-image img {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15) !important;
+}
+/* === REPO CARDS IN DARK MODE === */
+body.dark-mode .learning-card {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .learning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .learning-card h3 {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .learning-card p {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .learning-card .btn-secondary {
+  background: #334155 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #475569 !important;
+}
+
+body.dark-mode .learning-card .btn-secondary:hover {
+  background: #475569 !important;
+}
+
+/* === ICONA GITHUB IN DARK MODE === */
+.project-icon i {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+
+
+body.dark-mode .project-icon i {
+  color: #f5f5f5 !important;
+}
+
+
+/* === DARK MODE: SKILL SECTION === */
+body.dark-mode .skill-card {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .skill-card h4 {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .skill-card .icon {
+  color: #38bdf8 !important;
+}
+
+body.dark-mode .percent {
+  color: #cbd5e1 !important;
+}
+
+/* 🔹 Progress bar */
+body.dark-mode .bar-bg {
+  background: #334155 !important;
+}
+
+body.dark-mode .bar-fill {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9) !important;
+}
+
+/* 🔹 Soft skills */
+body.dark-mode .soft-skills li {
+  background: linear-gradient(90deg, #0284c7, #0ea5e9) !important;
+  box-shadow: 0 4px 8px rgba(56, 189, 248, 0.3) !important;
+}

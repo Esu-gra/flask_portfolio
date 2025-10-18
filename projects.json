@@ -1,0 +1,22 @@
+[
+  {
+    "title": "ITS Progettazione",
+    "description": "Repository con esercizi e documenti sul modulo di progettazione software.",
+    "link": "https://github.com/Esu-gra/Its_Progettazione"
+  },
+  {
+    "title": "ITS Data Python",
+    "description": "Raccolta di script, lezioni e progetti in Python realizzati durante il corso ITS.",
+    "link": "https://github.com/Esu-gra/Its_Data_Python"
+  },
+  {
+    "title": "ITS Web 1",
+    "description": "Esercizi e progetti sullo sviluppo web front-end con HTML, CSS e JavaScript.",
+    "link": "https://github.com/Esu-gra/Its_web_1"
+  },
+  {
+    "title": "ITS Database",
+    "description": "Lezioni e query SQL sul modulo database, con focus su progettazione e relazioni.",
+    "link": "https://github.com/Esu-gra/Its_BD"
+  }
+]

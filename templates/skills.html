@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Le mie competenze</h2>
+<p class="skills-intro">
+    Una panoramica delle tecnologie e strumenti che utilizzo nello sviluppo web.
+</p>
+
+<section class="skills-grid">
+
+    <!-- 🔹 Linguaggi -->
+    <div class="skill-category">
+        <h2>Linguaggi di Programmazione</h2>
+        <div class="skills-cards">
+            {% set linguaggi = [
+                ('html5', 'HTML5 / CSS3', 90),
+                ('javascript', 'JavaScript', 75),
+                ('python', 'Python', 85),
+                ('php', 'PHP', 70),
+                ('database', 'SQL', 80)
+            ] %}
+            {% for icon, name, level in linguaggi %}
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="devicon-{{ icon }}-plain colored"></i>
+                </div>
+                <h4>{{ name }}</h4>
+                <div class="bar-bg">
+                    <div class="bar-fill" style="width: {{ level }}%"></div>
+                </div>
+                <span class="percent">{{ level }}%</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 🔹 Framework -->
+    <div class="skill-category">
+        <h2>Framework & Librerie</h2>
+        <div class="skills-cards">
+            {% set frameworks = [
+                ('flask', 'Flask', 80),
+                ('react', 'React (base)', 60),
+                ('bootstrap', 'Bootstrap', 85),
+                ('laravel', 'Laravel (base)', 50)
+            ] %}
+            {% for icon, name, level in frameworks %}
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="devicon-{{ icon }}-plain colored"></i>
+                </div>
+                <h4>{{ name }}</h4>
+                <div class="bar-bg">
+                    <div class="bar-fill" style="width: {{ level }}%"></div>
+                </div>
+                <span class="percent">{{ level }}%</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 🔹 Tools -->
+    <div class="skill-category">
+        <h2>Database & Tools</h2>
+        <div class="skills-cards">
+            {% set tools = [
+                ('git', 'Git / CLI', 85),
+                ('linux', 'Linux', 80),
+                ('postgresql', 'PostgreSQL', 75),
+                ('mysql', 'MySQL (base)', 65)
+            ] %}
+            {% for icon, name, level in tools %}
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="devicon-{{ icon }}-plain colored"></i>
+                </div>
+                <h4>{{ name }}</h4>
+                <div class="bar-bg">
+                    <div class="bar-fill" style="width: {{ level }}%"></div>
+                </div>
+                <span class="percent">{{ level }}%</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 🔹 Soft Skills -->
+    <div class="skill-category">
+        <h2>Soft Skills</h2>
+        <ul class="soft-skills">
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+            <li>Autonomia</li>
+            <li>Gestione dello stress</li>
+            <li>Adattabilità</li>
+        </ul>
+    </div>
+
+</section>
+
+{% endblock %}

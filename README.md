@@ -8,10 +8,10 @@ Questo progetto mostra le mie competenze tecniche, i progetti svolti durante il 
 ##Tecnologie utilizzate
 
 - **Python 3.12**
-- **Flask** — framework backend leggero e potente
+- **Flask** — framework backend
 - **HTML5 / CSS3 / JavaScript**
 - **Font Awesome & DevIcons**
-- **JSON** per la gestione dinamica dei progetti
+- **JSON** per la gestione dinamica delle repo github
 - **Render** per il deploy in cloud
 
 ---

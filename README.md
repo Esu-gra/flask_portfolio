@@ -66,13 +66,6 @@ Il progetto è attualmente online su Render:
 
 https://flask-portfolio-5ajp.onrender.com
 
- Contatti
-
-Email: esubalewgrappasonni@gmail.com
-
-LinkedIn: linkedin.com/in/esubalew-grappasonni
-
-GitHub: github.com/Esu-gra
 
 Se il progetto ti piace, lascia una stella su GitHub!
 

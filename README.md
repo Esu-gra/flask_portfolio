@@ -55,10 +55,10 @@ flask_portfolio/
 Per eseguire il progetto in locale:
 
 bash:
-git clone https://github.com/Esu-gra/flask_portfolio.git
-cd flask_portfolio
-pip install -r requirements.txt
-python app.py
+--git clone https://github.com/Esu-gra/flask_portfolio.git,
+--cd flask_portfolio,
+--pip install -r requirements.txt,
+--python app.py
 
 
 Deploy online

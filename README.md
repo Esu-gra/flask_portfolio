@@ -30,7 +30,8 @@ Questo progetto mostra le mie competenze tecniche, i progetti svolti durante il 
 flask_portfolio/
 │
 ├── app.py # Applicazione Flask principale
-├── projects.json # File JSON con i progetti
+├── projects.json # File JSON con le repo github
+
 ├── requirements.txt # Dipendenze Python
 │
 ├── templates/ # Template HTML

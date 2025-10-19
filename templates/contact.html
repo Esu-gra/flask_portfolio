@@ -4,16 +4,16 @@
 <p class="p_contact">Hai una domanda o vuoi collaborare? Compila il modulo qui sotto!</p>
 
 <!-- Messaggi di conferma / errore -->
-{% with messages = get_flashed_messages(with_categories=true) %}
+<!-- {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     {% for category, msg in messages %}
       <div class="flash {{ category }}">{{ msg }}</div>
     {% endfor %}
   {% endif %}
-{% endwith %}
+{% endwith %} -->
 
 <!-- FORM DI CONTATTO -->
-<form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+<!-- <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
     <label for="nome">Nome</label>
     <input type="text" id="nome" name="nome" required>
 
@@ -27,8 +27,8 @@
     <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
 
     <button type="submit" class="btn-primary">Invia</button>
-</form>
+</form> -->
 
-<!-- 🔹 SEZIONE DOWNLOAD CV -->
+<!-- SEZIONE DOWNLOAD CV -->
 
-{% endblock %}
+<!-- {% endblock %} -->

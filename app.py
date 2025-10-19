@@ -45,13 +45,6 @@ def contact():
 def about():
     return render_template("about.html")
 
-@app.route("/download_cv")
-def download_cv():
-    return send_from_directory(
-        directory=os.path.join(app.root_path, "static/files"),
-        path="CV_Esubalew_Grappasonni_data_2025.pdf",
-        as_attachment=True
-    )
 
 # === AVVIO APP ===
 if __name__ == "__main__":

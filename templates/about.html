@@ -23,12 +23,14 @@
     </p>
 
 <section class="cv-download">
-    <h3>Vuoi saperne di più su di me?</h3>
-    <p>Scarica il mio curriculum aggiornato:</p>
-  <a href="{{ url_for('static', filename='files/CV_Esubalew_Grappasonni_data_2025(2).pdf') }}"
-   class="btn-secondary" download>
-   <i class="fa-solid fa-file-arrow-down"></i> Scarica CV (PDF)
-</a>
+  <h3>Vuoi saperne di più su di me?</h3>
+  <p>Scarica il mio curriculum aggiornato:</p>
 
+  <a href="{{ url_for('static', filename='files/cv_Grappasonni.pdf') }}"
+     class="btn-primary"
+     download>
+     <i class="fa-solid fa-file-arrow-down"></i> Scarica CV (PDF)
+  </a>
 </section>
+
 {% endblock %}

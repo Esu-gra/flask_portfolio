@@ -68,6 +68,3 @@ Il progetto è attualmente online su Render:
 https://flask-portfolio-5ajp.onrender.com
 
 
-Se il progetto ti piace, lascia una stella su GitHub!
-
-Grazie!!

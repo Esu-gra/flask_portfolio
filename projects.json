@@ -18,5 +18,10 @@
     "title": "ITS Database",
     "description": "Lezioni e query SQL sul modulo database, con focus su progettazione e relazioni.",
     "link": "https://github.com/Esu-gra/Its_BD"
+  },
+   {
+    "title": "ITS Ai",
+    "description": "Progetti ed esercitazioni su ETL, data cleaning, analisi esplorativa e visualizzazione dati con strumenti BI. Focus su pipeline dati e trasformazione per supporto decisionale.",
+    "link": "https://github.com/Esu-gra/its_Ai"
   }
 ]

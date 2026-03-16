@@ -3,21 +3,21 @@
 
 <h2>Le mie competenze</h2>
 <p class="skills-intro">
-    Una panoramica delle tecnologie e strumenti che utilizzo nello sviluppo web.
+    Competenze tecniche sviluppate nel percorso ITS in Data Analysis & AI
+    e nel bootcamp Full Stack — sempre in crescita.
 </p>
 
 <section class="skills-grid">
 
-    <!-- 🔹 Linguaggi -->
+    <!-- 🔹 Linguaggi & Backend -->
     <div class="skill-category">
-        <h2>Linguaggi di Programmazione</h2>
+        <h2>Linguaggi & Backend</h2>
         <div class="skills-cards">
             {% set linguaggi = [
-                ('html5', 'HTML5 / CSS3', 90),
-                ('javascript', 'JavaScript', 75),
                 ('python', 'Python', 85),
-                ('php', 'PHP', 70),
-                ('database', 'SQL', 80)
+                ('postgresql', 'SQL / PostgreSQL', 80),
+                ('javascript', 'JavaScript', 70),
+                ('html5', 'HTML5 / CSS3', 85)
             ] %}
             {% for icon, name, level in linguaggi %}
             <div class="skill-card">
@@ -34,17 +34,19 @@
         </div>
     </div>
 
-    <!-- 🔹 Framework -->
+    <!-- 🔹 Data Analysis & ML -->
     <div class="skill-category">
-        <h2>Framework & Librerie</h2>
+        <h2>Data Analysis & Machine Learning</h2>
         <div class="skills-cards">
-            {% set frameworks = [
-                ('flask', 'Flask', 80),
-                ('react', 'React (base)', 60),
-                ('bootstrap', 'Bootstrap', 85),
-                ('laravel', 'Laravel (base)', 50)
+            {% set data = [
+                ('pandas', 'Pandas', 80),
+                ('numpy', 'NumPy', 80),
+                ('matplotlib', 'Matplotlib / Seaborn', 75),
+                ('scikitlearn', 'Scikit-learn', 70),
+                ('keras', 'Keras / TensorFlow', 65),
+                ('jupyter', 'Jupyter Notebook', 85)
             ] %}
-            {% for icon, name, level in frameworks %}
+            {% for icon, name, level in data %}
             <div class="skill-card">
                 <div class="icon">
                     <i class="devicon-{{ icon }}-plain colored"></i>
@@ -59,15 +61,15 @@
         </div>
     </div>
 
-    <!-- 🔹 Tools -->
+    <!-- 🔹 Tools & Infrastruttura -->
     <div class="skill-category">
-        <h2>Database & Tools</h2>
+        <h2>Tools & Infrastruttura</h2>
         <div class="skills-cards">
             {% set tools = [
-                ('git', 'Git / CLI', 85),
-                ('linux', 'Linux', 80),
-                ('postgresql', 'PostgreSQL', 75),
-                ('mysql', 'MySQL (base)', 65)
+                ('git', 'Git / GitHub', 85),
+                ('linux', 'Linux / CLI', 80),
+                ('flask', 'Flask', 75),
+                ('react', 'React (base)', 60)
             ] %}
             {% for icon, name, level in tools %}
             <div class="skill-card">
@@ -88,11 +90,12 @@
     <div class="skill-category">
         <h2>Soft Skills</h2>
         <ul class="soft-skills">
+            <li>Curiosità tecnica & autodidatta</li>
+            <li>Problem Solving analitico</li>
+            <li>Metodico & orientato ai dati</li>
             <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Autonomia</li>
-            <li>Gestione dello stress</li>
             <li>Adattabilità</li>
+            <li>Voglia di imparare</li>
         </ul>
     </div>
 
